@@ -34,27 +34,27 @@ int costo(int N, int M, int x[], int y[]) {
 			sumN += y[i]; // 1 tiempo de asignacion + 1 tiempo de oa + 1 tiempo de indexacion
       	}
   	}
-	//-> Total parcial: 4 + 1 + (max)(12)
+	//-> Total parcial: 4 + 1 + (max)(13)
 
   	int resulVert = sumN + N*sumM; // 1 tiempo de asigacion + 2 tiempos de oa
    	//cout<< "Suma vert: " << resulVert << endl;
    	int resulHor = sumM + M*sumN; // 1 tiempo de asigacion + 2 tiempos de oa
    	//cout<< "Suma Hor: " << resulHor << endl;
 
-   	//-> Total parcial: 4 + 1 + (max)(12) + 6
+   	//-> Total parcial: 4 + 1 + (max)(13) + 6
 
    
    	if (resulHor < resulVert){ //1 tiempo de comparaciones
       	return resulHor; //1 tiempo de return
    	} else
       	return resulVert;
-	//-> Total: 4 + 1 + (max)(12) + 6 + 2
+	//-> Total: 4 + 1 + (max)(13) + 6 + 2
 }
 /*
 a)
-F(N)= 4 + 1 + (max)(12) + 6 + 2
-    = 13 + 12mas
-f(n)= 13 + 12n
+F(N)= 4 + 1 + (max)(13) + 6 + 2
+    = 13 + 13mas
+f(n)= 13 + 13n
 
 b)
 El peor de los casos es O(n)
