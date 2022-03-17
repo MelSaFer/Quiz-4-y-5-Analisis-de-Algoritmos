@@ -2,7 +2,10 @@
 Melany Salas Fernandez
 Carné: 2021121147
 
+Las respuestas con el f(n), O grande y loop invariant están en los comentarios luego de cada ejercicio.
+
 ---------------------------PRUEBAS DE EJECUCION----------------------------
+
 -----------------------------Prueba Radix Sort-----------------------------
 2 - 3 - 10 - 600 - 1000 -
 
