@@ -89,7 +89,7 @@ void radixSort(int *arr, int n, int max) {
       	}
       	count = 0;  //1 tiempo de asigacion = 1
       	//1 tiempo de asigacion = 1
-		// -> 10 * 18n = 180n
+		// -> 10 *( 3 + 18n) = 30 + 180n
       	for(j = 0; j < 10; j++) { //1 tiempo de comparacion + 1 tiempo de asignacion + 1 tiempo de operacion aritmetica = 3
          	//delete from linked lists and store to array
          	//->SE HACE N VECES ->18n
@@ -101,14 +101,14 @@ void radixSort(int *arr, int n, int max) {
          	}
       	}
    	}
-   	//-> Total parcial: 3 + 1 + max(14+ 1 + 13n + 2 + 180n)
+   	//-> Total parcial: 3 + 1 + max(14+ 1 + 13n + 2 + 30 + 180n)
 }
 /*
 a)
 NOTA= K es equivalente a max
-F(N)= 3 + 1 + k(14 + 1 + 13n + 2 + 180n)
-    = 4 + 17k + 13kn + 180kn
-	= 4 + 17k + 193kn
+F(N)= 3 + 1 + k(14 + 1 + 13n + 2 + 30 + 180n)
+    = 4 + 47k + 13kn + 180kn
+	= 4 + 47k + 193kn
 
 b)
 El peor de los casos es O(kn) y se da cuando tenemos un algoritmo en que el array list donde hay una gran difrentencia entre la cantidad de digitos significativamente
