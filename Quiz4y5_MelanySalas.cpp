@@ -91,17 +91,18 @@ void radixSort(int *arr, int n, int max) {
             	arr[count] = *(pocket[j].begin());  //2 tiempos de indexacion + 2 tiempos de llamadas a funciones + 1 tiempo de asignacion = 5
             	pocket[j].erase(pocket[j].begin());  //2 tiempos de indexacion + 4 tiempos de llamadas a funciones + 1 tiempo por paso de parametros = 7
             	count++;  //1 tiempo de asignacion + 1 tiempo de operacion aritmetica = 2
-            	//cout << "Iteracion: "<< j << " - Cuenta: " << count << " - Pocket: " << arr[count] << endl;
+            	
          	}
       	}
    	}
-   	//-> Total parcial: 3 + 1 + k(11+ 1 + 13n + 2 + 180n)
+   	//-> Total parcial: 3 + 1 + max(14+ 1 + 13n + 2 + 180n)
 }
 /*
 a)
-F(N)= 3 + 1 + k(11+ 1 + 13n + 2 + 180n)
-    = 4 + 14k + 13kn + 180kn
-	= 4 + 14 k + 193kn
+NOTA= K es equivalente a max
+F(N)= 3 + 1 + k(14 + 1 + 13n + 2 + 180n)
+    = 4 + 17k + 13kn + 180kn
+	= 4 + 17k + 193kn
 
 b)
 El peor de los casos es O(kn) y se da cuando tenemos un algoritmo en que el array list donde hay una gran difrentencia entre la cantidad de digitos significativamente
@@ -109,7 +110,7 @@ mayor entre el numero maximo y esl resto
 
 c) 
 Loop Invariant: Los números estan ordenados si tomamos en cuenta los digitos del menos significativo hasta el que esta en la posicion i
-				-> Cada numero, viendo num%10^i estan ordenados
+				-> Cada numero del array, viendo sus num%10^i digitos, estan ordenados.
 */
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------
