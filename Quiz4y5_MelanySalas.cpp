@@ -1,3 +1,9 @@
+/*
+Análisis de algoritmos
+Melany Salas Fernández
+Carné: 2021121147
+*/
+
 #include <iostream>
 #include <list>
 #include <cmath>
